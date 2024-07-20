@@ -1,0 +1,23 @@
+.container-comment {
+    text-align: end;
+
+    .no-form {
+        text-align: center;
+        min-width: 100%;
+        list-style: none;
+        background-color: rgba(8, 90, 26, 0.157);
+        border-radius: 8px;
+        border: none;
+        padding: 19px;
+        font-size: 17px;
+        box-sizing: border-box;
+        transition: 1.5s;
+        color: rgb(240, 255, 255);
+        font-weight: 300;
+        margin-bottom: 20px;
+        padding: 20px;
+        display: flex;
+        align-items: space-between;
+        flex-direction: column;
+    }
+}

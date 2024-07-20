@@ -1,0 +1,30 @@
+.container-subscriptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .title-subscriptions {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 20px;
+        margin-top: 30px;
+        color: black;
+    }
+
+    .subscriptions-block {
+        list-style: none;
+        width: 100%;
+
+        &__elem {
+            background-color: rgba(8, 90, 26, 0.3);
+            border-radius: 12px;
+            padding: 30px;
+            width: 100%;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 20px;
+            color: azure;
+        }
+    }
+}

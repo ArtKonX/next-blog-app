@@ -1,0 +1,31 @@
+.container-posts {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .posts {
+        width: 100%;
+
+        .posts__title {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 20px;
+            margin-top: 30px;
+            color: black;
+        }
+
+        .posts__block {
+            list-style: none;
+        }
+
+        .posts__no-post {
+            background-color: rgba(8, 90, 26, 0.3);
+            border-radius: 12px;
+            padding: 30px;
+            width: 100%;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 23px;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.comments {
+    min-width: 100%;
+    // max-width: 100%;
+    // background-color: rgba(8, 90, 26, 0.157);
+    // border-radius: 8px;
+    border: none;
+    // padding: 9px;
+    font-size: 17px;
+    box-sizing: border-box;
+    transition: 1.5s;
+    color: rgb(240, 255, 255);
+    min-height: 100px;
+    font-weight: 300;
+    margin-top: 10px;
+
+    &__elem {
+        list-style: none;
+    }
+}

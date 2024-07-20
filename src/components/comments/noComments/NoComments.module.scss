@@ -1,0 +1,21 @@
+.no-comment {
+    min-width: 100%;
+    background-color: rgba(8, 90, 26, 0.157);
+    border-radius: 8px;
+    border: none;
+    font-size: 17px;
+    box-sizing: border-box;
+    transition: 1.5s;
+    color: rgb(240, 255, 255);
+    font-weight: 300;
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+
+    &__text {
+        font-size: 25px;
+        color: black;
+        list-style: none;
+    }
+}

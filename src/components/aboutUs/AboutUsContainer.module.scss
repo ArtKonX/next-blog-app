@@ -1,0 +1,26 @@
+.about-us-container {
+
+    display: flex;
+    justify-content: center;
+    background-color: rgba(8, 90, 26, 0.157);
+    padding: 100px;
+    border-radius: 8px;
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        &-text {
+            font-size: 4rem;
+            color: #006717;
+
+            &_color {
+                color: azure;
+                background-color: #006717;
+                padding: 0 8px;
+                border-radius: 15px;
+                transition: 1.5s;
+            }
+        }
+    }
+}

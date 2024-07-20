@@ -1,0 +1,28 @@
+.menu__link {
+    text-decoration: none;
+    display: flex;
+    margin-right: 30px;
+    color: azure;
+    font-size: 22px;
+    display: inline;
+    transition: 1.5s;
+
+    &:hover {
+        text-decoration: underline solid #006717;
+        display: flex;
+        text-underline-offset: 7px;
+        transition: 1.5s;
+        color: #006717;
+    }
+}
+
+.menu__link_active {
+    text-decoration: none;
+    display: flex;
+    margin-right: 30px;
+    color: #006717;
+    font-size: 22px;
+    display: inline;
+    transition: 1.5s;
+    border-bottom: 1px solid #006717;
+}

@@ -1,0 +1,17 @@
+.log-or-reg-link {
+    text-decoration: none;
+    display: flex;
+    margin-right: 30px;
+    color: azure;
+    font-size: 22px;
+    display: inline;
+    transition: 1.5s;
+
+    &:hover {
+        text-decoration: underline solid #006717;
+        display: flex;
+        text-underline-offset: 7px;
+        transition: 1.5s;
+        color: #006717;
+    }
+}

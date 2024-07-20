@@ -1,0 +1,60 @@
+.post-actions {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    &__btn-subscription {
+        text-align: right;
+
+        .btn-subscription {
+            @extend %btn-subscription-base;
+        }
+
+        .btn-subscription_active {
+            padding: 13px;
+            background-color: rgb(228, 224, 224);
+            border: 1px solid rgba(8, 90, 26, 0.7);
+            font-size: 17px;
+            color: black;
+            border-radius: 8px;
+            transition: 1.5s;
+            cursor: pointer;
+        }
+    }
+
+    .btn-subscription {
+        @extend %btn-subscription-base;
+    }
+
+    .post-actions__link-update {
+        @extend %btn-subscription-base;
+        text-decoration: none;
+        height: 48px;
+        display: block;
+        padding: 13px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+    }
+}
+
+%btn-subscription-base {
+    padding: 13px;
+    background-color: rgba(8, 90, 26, 0.3);
+    border: 1px solid azure;
+    font-size: 17px;
+    color: azure;
+    border-radius: 8px;
+    transition: 1.5s;
+    cursor: pointer;
+    text-align: right;
+
+    &:hover {
+        background-color: rgba(8, 90, 26, 0.7);
+        border: 1px solid rgba(240, 255, 255, 0.242);
+        transition: 1.5s;
+        color: azure;
+    }
+}

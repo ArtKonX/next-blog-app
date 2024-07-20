@@ -1,0 +1,39 @@
+.form__tags-block {
+
+    margin-bottom: 10px;
+
+    .label-title {
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+
+    .select {
+        margin-left: 10px;
+        font-size: 16px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -webkit-border-radius: 0px;
+        appearance: none;
+        padding: 6px;
+        outline: none;
+        background-color: rgba(8, 90, 26, 0.157);
+        border-radius: 8px;
+        border: none;
+        color: rgb(240, 255, 255);
+        cursor: pointer;
+
+        &:focus {
+            background-color: rgba(8, 90, 26, 0.3);
+            transition: 1.5s;
+            border: none;
+            outline: none;
+        }
+
+        &:hover {
+            background-color: rgba(8, 90, 26, 0.3);
+            transition: 1.5s;
+            border: none;
+            outline: none;
+        }
+    }
+}

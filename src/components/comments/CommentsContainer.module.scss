@@ -1,0 +1,12 @@
+.container-comments {
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .comments-block-title {
+        font-size: 22px;
+        margin-bottom: 30px;
+        font-weight: 400;
+    }
+}
