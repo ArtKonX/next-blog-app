@@ -1,4 +1,4 @@
-# Веб-блог MatrixMusic на Next.js с MongoDB и NextAuth
+# Веб-блог MatrixBlog на Next.js с MongoDB и NextAuth
 
 Данный проект представляет собой веб блог, который разработан с использованием фреймворка Next.js версии 14 и базы данных MongoDB с помощью MongoDB Compass.
 
