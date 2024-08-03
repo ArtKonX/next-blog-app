@@ -1,4 +1,5 @@
 import TagsMenu from "@/components/tags/TagsMenu/TagsMenu";
+import Footer from "@/components/footer/Footer";
 
 import HeaderContainer from "@/components/header/HeaderContainer";
 
@@ -13,6 +14,7 @@ export default async function HomeLayout({
                 <HeaderContainer />
                 <TagsMenu />
                 {children}
+                <Footer />
             </div>
         </div>
     );

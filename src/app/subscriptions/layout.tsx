@@ -1,5 +1,7 @@
 import HeaderContainer from "@/components/header/HeaderContainer";
 
+import Footer from "@/components/footer/Footer";
+
 export default async function HomeLayout({
     children,
 }: Readonly<{
@@ -11,6 +13,7 @@ export default async function HomeLayout({
             <div className="wrapper">
                 <HeaderContainer />
                 {children}
+                <Footer />
             </div>
         </div>
 

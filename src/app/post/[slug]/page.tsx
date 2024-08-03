@@ -1,7 +1,7 @@
 'use client'
 
-import React, { useState, useEffect, useRef } from 'react';
-import { signOut, useSession } from "next-auth/react";
+import React, { useState, useEffect } from 'react';
+import { useSession } from "next-auth/react";
 
 import styles from '@/components/post/PostContainer.module.scss'
 import { dmSerifDisplay400 } from '@/styles/fonts-project/fonts';
@@ -15,20 +15,6 @@ import CommentsContainer from '@/components/comments/CommentsContainer'
 import { getPostsData, addComment, getComment } from '@/utils/apiUtils/apiRequests';
 
 import IPost from '@/interfaces/post.interface';
-
-export async function getStaticPaths() {
-    const response = await getPostsData();
-    const posts = response.data;
-
-    const paths = posts.map((post: IPost) => ({
-        params: { slug: post._id.toString() },
-    }));
-
-    return {
-        paths,
-        fallback: false,
-    };
-}
 
 type Params = {
     slug: string
