@@ -2,11 +2,24 @@ import Comment from "@/models/Comment";
 import connect from "@/db/mongpDb";
 import { NextResponse } from "next/server";
 import { NextRequest } from "next/server";
+import mongoose from "mongoose";
 
 export const POST = async (request: NextRequest) => {
     const { post, email, name, content } = await request.json();
 
     await connect();
+
+    const db = mongoose.connection.db;
+
+    const collections = await db.listCollections().toArray();
+    const collectionName = 'comments';
+    const collectionExists = collections.some((collection) => collection.name === collectionName);
+
+
+    if (!collectionExists) {
+        await db.createCollection(collectionName);
+        console.log(`Collection '${collectionName}' created.`);
+    }
 
     try {
 

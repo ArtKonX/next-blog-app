@@ -8,7 +8,7 @@ import { dmSerifDisplay400 } from '@/styles/fonts-project/fonts';
 
 import PostContainer from '@/components/post/PostContainer'
 
-import CommentContainer from '@/components/create-comment/CommentContainer';
+import CreateComment from '@/components/createComment/CreateComment';
 
 import CommentsContainer from '@/components/comments/CommentsContainer'
 
@@ -80,7 +80,7 @@ export default function PostPage({ params }: {
     return (
         <div className={`${dmSerifDisplay400.className} ${styles.container}`}>
             <PostContainer post={postOnly} params={params} />
-            <CommentContainer onSubmit={onSubmit} setBody={setBody} />
+            <CreateComment onSubmit={onSubmit} setBody={setBody} />
             <CommentsContainer comments={comments} />
         </div>
     );

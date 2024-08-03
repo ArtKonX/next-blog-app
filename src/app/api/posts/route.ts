@@ -1,6 +1,6 @@
 import Post from "@/models/Post";
 import connect from "@/db/mongpDb";
-import { Types } from "mongoose";
+import mongoose, { Types } from "mongoose";
 import { NextResponse } from "next/server";
 import { NextRequest } from "next/server";
 
@@ -8,6 +8,18 @@ export const POST = async (request: NextRequest) => {
     const { email, name, title, content, tags, isHidden } = await request.json();
 
     await connect();
+
+    const db = mongoose.connection.db;
+
+    const collections = await db.listCollections().toArray();
+    const collectionName = 'posts';
+    const collectionExists = collections.some((collection) => collection.name === collectionName);
+
+
+    if (!collectionExists) {
+        await db.createCollection(collectionName);
+        console.log(`Collection '${collectionName}' created.`);
+    }
 
     try {
 
