@@ -10,6 +10,7 @@ import { useEffect, useState } from 'react';
 import IPost from '@/interfaces/post.interface';
 
 import { getPost } from '@/utils/apiUtils/apiRequests';
+import { useSession } from 'next-auth/react';
 
 type Params = {
     slug: string;
@@ -20,6 +21,8 @@ export default function EditorContainer({ params }: { params: Params }) {
 
     const [post, setPost] = useState<IPost | null>(null);
 
+    const { data: session } = useSession();
+
     useEffect(() => {
         const fetchPost = async () => {
             const fetchedPost = await getPost(params);
@@ -29,8 +32,9 @@ export default function EditorContainer({ params }: { params: Params }) {
         fetchPost();
     }, []);
 
-    if (!post) return <div>Loading...</div>;
+    if (!session?.user) return (<h1 className={styles['title-editor']}>Вы не вошли в аккаунт</h1>)
 
+    if (!post) return <div>Loading...</div>;
 
     return (
         <div className={styles['container-editor']}>

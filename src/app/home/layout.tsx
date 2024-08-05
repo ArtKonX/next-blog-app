@@ -1,7 +1,4 @@
-import TagsMenu from "@/components/tags/TagsMenu/TagsMenu";
-import Footer from "@/components/footer/Footer";
-
-import HeaderContainer from "@/components/header/HeaderContainer";
+import LayoutAdvancedBlock from "@/components/layoutBlock/layoutBlock/layoutAdvancedBlock/LayoutAdvancedBlock";
 
 export default async function HomeLayout({
     children,
@@ -9,13 +6,6 @@ export default async function HomeLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <div className="container">
-            <div className="wrapper">
-                <HeaderContainer />
-                <TagsMenu />
-                {children}
-                <Footer />
-            </div>
-        </div>
+        <LayoutAdvancedBlock children={children}/>
     );
 }

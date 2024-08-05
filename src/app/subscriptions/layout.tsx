@@ -1,21 +1,11 @@
-import HeaderContainer from "@/components/header/HeaderContainer";
+import LayoutBlock from "@/components/layoutBlock/layoutBlock/LayoutBlock";
 
-import Footer from "@/components/footer/Footer";
-
-export default async function HomeLayout({
+export default async function SubscriptionsLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
     return (
-
-        <div className="container">
-            <div className="wrapper">
-                <HeaderContainer />
-                {children}
-                <Footer />
-            </div>
-        </div>
-
+        <LayoutBlock children={children}/>
     );
 }

@@ -3,16 +3,22 @@
 import styles from './SubscriptionContainer.module.scss';
 
 import { getSubs } from '@/utils/apiUtils/apiRequests';
+import { useSession } from 'next-auth/react';
 import React, { useState, useEffect } from 'react';
 
 export default function SubscriptionsContainer() {
 
     const [dataSubscription, setDataSubscription] = useState<{ subscriptions: string[] }>()
 
+
+    const { data: session } = useSession();
+
     useEffect(() => {
         const fetchPosts = async () => setDataSubscription(await getSubs())
         if (fetchPosts) fetchPosts()
     }, []);
+
+    if (!session?.user) return (<h1 className={styles['title-subscriptions']}>Вы не вошли в аккаунт</h1>)
 
     if (!dataSubscription) return <div>Loading...</div>;
 
