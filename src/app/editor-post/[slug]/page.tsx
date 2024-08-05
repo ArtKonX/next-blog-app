@@ -1,4 +1,4 @@
-import EditorContainer from '@/components/editor/EditorContainer'
+import EditorPostContainer from '@/components/editor/EditorContainer'
 
 import type { Metadata } from "next";
 
@@ -10,11 +10,11 @@ type Params = {
     slug: string
 }
 
-export default function PostEditor({ params }: {params: Params}) {
+export default function EditorContainer({ params }: {params: Params}) {
 
     return (
        <div>
-            <EditorContainer params={params}/>
+            <EditorPostContainer params={params}/>
        </div>
     );
 }

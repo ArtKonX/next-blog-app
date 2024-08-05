@@ -3,7 +3,7 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import styles from './EditorContainer.module.scss'
-import PostForm from './postForm/PostForm';
+import PostForm from './editorForm/EditorForm';
 
 import { useEffect, useState } from 'react';
 
@@ -16,7 +16,7 @@ type Params = {
     slug: string;
 };
 
-export default function EditorContainer({ params }: { params: Params }) {
+export default function EditorPostContainer({ params }: { params: Params }) {
     const router = useRouter();
 
     const [post, setPost] = useState<IPost | null>(null);

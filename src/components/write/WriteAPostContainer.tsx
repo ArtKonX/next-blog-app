@@ -12,7 +12,7 @@ export default function WriteAPostContainer() {
   if (!session?.user) return (<h1 className={styles.title}>Вы не вошли в аккаунт</h1>)
 
   return (
-    <div className={styles['container-post']}>
+    <div className={styles['container-write-post']}>
       <h1 className={styles.title}>Напишите Ваш пост:</h1>
       <WriteAPostForm />
     </div>

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { dmSerifDisplay400, roboto } from '@/styles/fonts-project/fonts';
-import styles from './PostForm.module.scss';
+import styles from './EditorForm.module.scss';
 
 import autoResizeTextarea from '@/utils/autoTextareaUtils/autoResizeTextarea'
 import { putPost } from '@/utils/apiUtils/apiRequests';
@@ -10,7 +10,7 @@ import { putPost } from '@/utils/apiUtils/apiRequests';
 import IPost from '@/interfaces/post.interface';
 import { FormEventHandler } from 'react';
 
-const PostForm = ({ post, onSubmit }: { post: IPost, onSubmit: FormEventHandler<HTMLFormElement | null> }) => {
+const EditorForm = ({ post, onSubmit }: { post: IPost, onSubmit: FormEventHandler<HTMLFormElement | null> }) => {
     const [title, setTitle] = useState(post.title);
     const [content, setContent] = useState(post.content);
     const [id, setId] = useState(post._id)
@@ -49,4 +49,4 @@ const PostForm = ({ post, onSubmit }: { post: IPost, onSubmit: FormEventHandler<
     );
 };
 
-export default PostForm;
+export default EditorForm;
