@@ -21,6 +21,7 @@ const InputBlock = ({
                 className={styles['input-block__input']}
                 id={id}
                 placeholder={placeholder}
+                required
                 {...register}
             />
         </div>
